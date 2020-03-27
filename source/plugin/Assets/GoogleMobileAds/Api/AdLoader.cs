@@ -21,11 +21,6 @@ using GoogleMobileAds.Common;
 
 namespace GoogleMobileAds.Api
 {
-    public enum NativeAdType
-    {
-        CustomTemplate
-    }
-
     public class AdLoader
     {
         private IAdLoaderClient adLoaderClient;
@@ -51,7 +46,7 @@ namespace GoogleMobileAds.Api
             AdLoaderClientArgs clientArgs = new AdLoaderClientArgs(){
                   AdUnitId = this.AdUnitId,
                   AdTypes = this.AdTypes,
-                  TemplateIds = templateIdsDictionary,
+                  TemplateIds = templateIdsDictionary
               };
             this.adLoaderClient = GoogleMobileAdsClientFactory.BuildAdLoaderClient(clientArgs);
 
